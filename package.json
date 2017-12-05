@@ -1,0 +1,35 @@
+{
+  "name": "fastify-bookshelfjs",
+  "version": "1.0.0",
+  "description": "bookshelf.js plugin for fastify",
+  "main": "index.js",
+  "author": "butlerx - butlerx@notthe.cloud",
+  "license": "MIT",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/butlerx/fastify-bookshelfJS.git"
+  },
+  "keywords": [
+    "Fastify",
+    "KnexJS",
+    "Plugin",
+    "bookshelJS"
+  ],
+  "bugs": {
+    "url": "https://github.com/butlerx/fastify-bookshelfjs/issues"
+  },
+  "homepage": "https://github.com/butlerx/fastify-bookshelfjs#readme",
+  "dependencies": {
+    "bookshelf": "^0.12.0",
+    "fastify-plugin": "^0.1.1",
+    "knex": "0.13"
+  },
+  "devDependencies": {
+    "fastify": "^0.35.5",
+    "sqlite3": "^3.1.13",
+    "tap": "^11.0.0"
+  }
+}
