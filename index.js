@@ -1,6 +1,9 @@
 const fastifyPlugin = require('fastify-plugin');
 const knex = require('knex');
 const bookshelf = require('bookshelf');
+const { devDependencies } = require('./package.json');
+
+const minVer = devDependencies.fastify
 
 module.exports = fastifyPlugin((fastify, opts, next) => {
   try {
@@ -15,4 +18,4 @@ module.exports = fastifyPlugin((fastify, opts, next) => {
   } catch (err) {
     next(err);
   }
-}, '>=0.30.0');
+}, minVer);
