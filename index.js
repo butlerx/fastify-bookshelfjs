@@ -6,7 +6,12 @@ module.exports = fastifyPlugin((fastify, opts, next) => {
   try {
     const handler = bookshelf(knex(opts));
     fastify.decorate('bookshelf', handler);
-    next();
+    handler.knex
+      .select('1')
+      .then(() => {
+        next();
+      })
+      .catch(next);
   } catch (err) {
     next(err);
   }

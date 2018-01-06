@@ -6,7 +6,7 @@
   "author": "butlerx - butlerx@notthe.cloud",
   "license": "MIT",
   "scripts": {
-    "test": "tap test.js"
+    "test": "tap tests"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "dependencies": {
     "bookshelf": "^0.12.0",
     "fastify-plugin": "^0.1.1",
-    "knex": "0.13"
+    "knex": "^0.14"
   },
   "devDependencies": {
     "fastify": "^0.35.5",
