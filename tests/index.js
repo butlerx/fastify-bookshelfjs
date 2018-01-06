@@ -20,10 +20,13 @@ fastify.ready(async err => {
     });
 
     await tap.test('bookshelf.knex should be able to query', async test => {
-      await fastify.bookshelf.knex.select(1);
-      test.pass('query works');
-      test.end();
-      return Promise.resolve();
+      try {
+        await fastify.bookshelf.knex.select(1);
+        test.pass('query works');
+        test.end();
+      } catch (error) {
+        test.fail(error);
+      }
     });
     tap.end();
   } catch (error) {
