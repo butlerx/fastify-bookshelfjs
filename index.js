@@ -3,7 +3,7 @@ const knex = require('knex');
 const bookshelf = require('bookshelf');
 const { devDependencies } = require('./package.json');
 
-const minVer = devDependencies.fastify
+const minVer = devDependencies.fastify;
 
 module.exports = fastifyPlugin((fastify, opts, next) => {
   try {

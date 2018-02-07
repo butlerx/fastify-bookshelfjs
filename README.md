@@ -22,21 +22,25 @@ $ yarn add mssql
 ## Usage
 
 ```js
-const bookshelf = require('fastify-bookshelfjs')
+const bookshelf = require('fastify-bookshelfjs');
 
-fastify.register(bookshelf, {
-  client: 'pg',
-  connection: {
-    host     : '127.0.0.1',
-    user     : 'your_database_user',
-    password : 'your_database_password',
-    database : 'myapp_test'
-  }
-}, console.error)
+fastify.register(
+  bookshelf,
+  {
+    client: 'pg',
+    connection: {
+      host: '127.0.0.1',
+      user: 'your_database_user',
+      password: 'your_database_password',
+      database: 'myapp_test',
+    },
+  },
+  console.error,
+);
 
 fastify.get('/', (request, reply) => {
-  console.log(fastify.bookshelf) // bookshelf object
-})
+  console.log(fastify.bookshelf); // bookshelf object
+});
 ```
 
 ## Further reading
@@ -52,4 +56,4 @@ v1.0.0
 
 ## License
 
-  Licensed under [MIT](./LICENSE).
+Licensed under [MIT](./LICENSE).
