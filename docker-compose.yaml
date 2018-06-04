@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  bookshelf:
+    image: "node:8"
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    command: "yarn test"

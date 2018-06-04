@@ -10,7 +10,7 @@ module.exports = fastifyPlugin((fastify, opts, next) => {
     const handler = bookshelf(knex(opts));
     fastify.decorate('bookshelf', handler);
     handler.knex
-      .select('1')
+      .raw(`select 'I have ${opts.connection.database}' as status`)
       .then(() => {
         next();
       })
