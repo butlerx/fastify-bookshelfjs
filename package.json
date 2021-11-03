@@ -1,6 +1,6 @@
 {
   "name": "fastify-bookshelfjs",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "bookshelf.js plugin for fastify",
   "main": "index.js",
   "author": "butlerx - butlerx@notthe.cloud",
@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/butlerx/fastify-bookshelfjs#readme",
   "dependencies": {
-    "bookshelf": "^0.15.1",
-    "fastify-plugin": "^1.6.0",
-    "knex": "^0.19.1"
+    "bookshelf": "^1.2.0",
+    "fastify-plugin": "^3.0.0",
+    "knex": "^0.95.13"
   },
   "devDependencies": {
-    "fastify": ">=2.2.0",
+    "fastify": "^3.22.1",
     "sqlite3": "^4.0.9",
-    "tap": "^14.6.1"
+    "tap": "^15.0.10"
   }
 }

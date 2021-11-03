@@ -10,16 +10,16 @@ fastify.register(bookshelf, {
   },
 });
 
-fastify.ready(async err => {
+fastify.ready(async (err) => {
   try {
     if (err) tap.fail(err);
-    await tap.test('fastify.bookshelf should exist', test => {
+    await tap.test('fastify.bookshelf should exist', (test) => {
       test.ok(fastify.bookshelf);
       test.end();
       return Promise.resolve();
     });
 
-    await tap.test('bookshelf.knex should be able to query', async test => {
+    await tap.test('bookshelf.knex should be able to query', async (test) => {
       try {
         await fastify.bookshelf.knex.select(1);
         test.pass('query works');

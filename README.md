@@ -1,7 +1,7 @@
 # Fastify BookshelfJS Plugin
 
-Bookshelf.js is a Javascript ORM built on top of knex.js.
-This plugin adds a shared bookshelf object to fastify that can be accessed from anywhere.
+Bookshelf.js is a Javascript ORM built on top of knex.js. This plugin adds a
+shared bookshelf object to fastify that can be accessed from anywhere.
 
 ## Installation
 
@@ -21,22 +21,18 @@ $ yarn add mssql
 
 ## Usage
 
-```js
+```javascript
 const bookshelf = require('fastify-bookshelfjs');
 
-fastify.register(
-  bookshelf,
-  {
-    client: 'pg',
-    connection: {
-      host: '127.0.0.1',
-      user: 'your_database_user',
-      password: 'your_database_password',
-      database: 'myapp_test',
-    },
+fastify.register(bookshelf, {
+  client: 'pg',
+  connection: {
+    host: '127.0.0.1',
+    user: 'your_database_user',
+    password: 'your_database_password',
+    database: 'myapp_test',
   },
-  console.error,
-);
+});
 
 fastify.get('/', (request, reply) => {
   console.log(fastify.bookshelf); // bookshelf object
@@ -45,14 +41,14 @@ fastify.get('/', (request, reply) => {
 
 ## Further reading
 
-Bookshelf used knex.js refer to [knexjs docs](http://knexjs.org/#Installation-client)
-for connection options.
+Bookshelf used knex.js refer to
+[knexjs docs](http://knexjs.org/#Installation-client) for connection options.
 
 [Bookshelf Docs](http://bookshelfjs.org/)
 
 ## Version
 
-v1.0.0
+v2.0.0
 
 ## License
 
