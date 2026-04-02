@@ -28,7 +28,7 @@
     "knex": "^0.95.13"
   },
   "devDependencies": {
-    "fastify": "^3.22.1",
+    "fastify": "^5.8.3",
     "sqlite3": "^4.0.9",
     "tap": "^15.0.10"
   }
